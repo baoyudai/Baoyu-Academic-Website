@@ -9,5 +9,8 @@ dist/
 *.log
 npm-debug.log*
 
+# Lock files - excluded due to npm ci compatibility issues with peer dependencies
+package-lock.json
+
 # OS files
 .DS_Store
