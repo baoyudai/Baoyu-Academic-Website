@@ -9,8 +9,5 @@ dist/
 *.log
 npm-debug.log*
 
-# Lock files
-package-lock.json
-
 # OS files
 .DS_Store
