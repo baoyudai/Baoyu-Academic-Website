@@ -4,9 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Baoyu (Brian) Dai | Portfolio</title>
+
+    <!-- Configure Tailwind before loading it (CDN usage) -->
+    <script>
+      tailwind = window.tailwind || {};
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1100px',   /* make the layout wider on large screens */
+              xl: '1200px'
+            }
+          },
+          extend: {
+            fontSize: {
+              /* Increase base scale slightly */
+              base: '1.0625rem' /* 17px */
+            },
+            lineHeight: {
+              relaxed: '1.85'
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- load Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="m-0 p-0">
+  <body class="m-0 p-0 text-base leading-relaxed">
     <div id="root"></div>
   </body>
 </html>
