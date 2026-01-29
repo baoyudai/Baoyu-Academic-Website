@@ -1,0 +1,16 @@
+/* Put in src/index.css and import it in src/index.js */
+:root {
+  --site-max-width: 1100px;
+}
+
+body {
+  font-family: "Georgia", serif; /* or your chosen font */
+}
+
+/* fallback if Tailwind container not used */
+.site-wrapper {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
