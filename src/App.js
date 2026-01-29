@@ -65,7 +65,7 @@ const App = () => {
           </div>
         </header>
 
-        <div className="flex-grow overflow-hidden">
+        <div className="flex-grow">
           {activeTab === 'home' && (
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-full">
               <aside className="md:col-span-7">
@@ -82,9 +82,7 @@ const App = () => {
                           <span className={`text-[10px] font-bold shrink-0 transition-colors ${theme.year}`}>{pres.year}</span>
                           <h3 className={`text-[12px] font-normal leading-snug transition-colors ${theme.itemTitle}`}>{pres.title}</h3>
                         </div>
-                        <div className="pl-9">
-                          <p className={`text-[11px] mb-0.5 transition-colors ${theme.itemSub}`}>{pres.event}</p>
-                        </div>
+                        <div className="pl-9"><p className={`text-[11px] mb-0.5 transition-colors ${theme.itemSub}`}>{pres.event}</p></div>
                       </div>
                     ))}
                   </div>
