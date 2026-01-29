@@ -15,18 +15,18 @@ const App = () => {
     institution: "University of California, Davis",
     email: "dbydai@ucdavis.edu",
     bio: "I am a Ph.D. student in the Department of Philosophy at the University of California, Davis. My research is situated at the intersection of the Philosophy of Science, the Philosophy of Mathematics, and Metaphysics. I am particularly interested in the epistemic nature of intra-mathematical explanation and the evolution of desire-satisfaction theories in moral psychology.",
-    researchStatement: "My research agenda currently investigates how mathematical proofs provide explanatory power, specifically arguing for an epistemic approach to intra-mathematical explanations. I am also exploring the challenges facing desire-satisfaction theories of well-being, specifically focusing on the 'problem of remote desires' and 'prudential neutrality' as discussed in recent literature on hidden desires.",
-    teachingPhilosophy: "I aim to bridge the gap between formal logical systems and intuitive philosophical reasoning. In my time as a Teaching Assistant for courses ranging from Elementary Logic to Minds, Brains, and Computers, I have focused on helping students master symbolic tools to better navigate complex metaphysical and ethical arguments."
+    researchStatement: "My research agenda currently investigates how mathematical proofs provide explanatory power, specifically arguing for an epistemic approach to intra-mathematical explanations. I am also exploring the challenges facing desire-satisfaction theories of well-being, specifically focusing on the 'problem of remote desires' and 'prudential neutrality'.",
+    teachingPhilosophy: "I aim to bridge the gap between formal logical systems and intuitive philosophical reasoning. In my time as a Teaching Assistant for courses ranging from Elementary Logic to Minds, Brains, and Computers, I have focused on helping students master symbolic tools."
   };
 
   const publications = [
     { title: "Rethinking the Reproductive Autonomy Rationale", venue: "Under Review", year: "2024" },
-    { title: "A New Attempt Against Hirsch's Deflationism", venue: "Dianoia: The Undergraduate Philosophy Journal of Boston College", year: "2022" }
+    { title: "A New Attempt Against Hirsch's Deflationism", venue: "Dianoia, (IX), 32-41", year: "2022" }
   ];
 
   const presentations = [
     { title: "Understanding Mathematics: Explaining Proofs", event: "7th Meeting of the APMP", location: "Pavia, Italy", year: "2024" },
-    { title: "How to Read Intra-Mathematical Explanations", event: "IV Unifesp International Philosophy Graduate Conference", location: "São Paulo, Brazil", year: "2023" }
+    { title: "How to Read Intra-Mathematical Explanations", event: "IV Unifesp Conference", location: "São Paulo, Brazil", year: "2023" }
   ];
 
   const teaching = [
@@ -49,8 +49,8 @@ const App = () => {
   };
 
   return (
-    <div style={palatinoStack} className={`min-h-screen w-full transition-colors duration-500 overflow-hidden flex flex-col p-6 md:p-10 lg:p-12 ${theme.bg} ${theme.textMain}`}>
-      <div className={`max-w-3xl w-full mx-auto flex flex-col h-full transition-colors duration-500 ${theme.bg}`}>
+    <div style={palatinoStack} className={`min-h-screen w-full transition-colors duration-500 flex flex-col p-6 md:p-10 lg:p-12 ${theme.bg} ${theme.textMain}`}>
+      <div className={`max-w-3xl w-full mx-auto flex flex-col flex-grow transition-colors duration-500 ${theme.bg}`}>
         <header className="mb-6 pb-4 flex-shrink-0 flex flex-col md:flex-row justify-between items-center md:items-baseline gap-4">
           <h1 className={`text-2xl md:text-3xl font-normal tracking-tight transition-colors ${theme.header}`}>{profile.name}</h1>
           <div className="flex items-center gap-6">
@@ -75,14 +75,16 @@ const App = () => {
               <main className="md:col-span-5 flex flex-col gap-6">
                 <section>
                   <h2 className={`text-[10px] uppercase tracking-wider mb-3 border-b pb-1 transition-colors ${theme.sectionTitle} ${theme.sectionBorder}`}>Recent Presentations</h2>
-                  <div className="space-y-4 pr-2 overflow-y-auto scrollbar-hide">
+                  <div className="space-y-4">
                     {presentations.map((pres, i) => (
                       <div key={i}>
                         <div className="flex items-baseline gap-3 mb-0.5">
                           <span className={`text-[10px] font-bold shrink-0 transition-colors ${theme.year}`}>{pres.year}</span>
                           <h3 className={`text-[12px] font-normal leading-snug transition-colors ${theme.itemTitle}`}>{pres.title}</h3>
                         </div>
-                        <div className="pl-9"><p className={`text-[11px] mb-0.5 transition-colors ${theme.itemSub}`}>{pres.event}</p></div>
+                        <div className="pl-9">
+                          <p className={`text-[11px] mb-0.5 transition-colors ${theme.itemSub}`}>{pres.event}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
